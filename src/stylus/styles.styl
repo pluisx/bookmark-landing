@@ -1,5 +1,6 @@
 @import "./hero.styl"
 @import "./header.styl"
+@import "./features.styl"
 
 :root 
     --softBlue hsl(231, 69%, 60%)
@@ -12,8 +13,41 @@ body
     background white
     color var(--veryDarkBlue)
     margin 0
-
+ul
+    padding 0
+    margin 0
+    list-style none
+ 
+.is-hidden
+    display none
 .u-wrapper
     max-width 1280px 
     margin auto
     padding: 0 1.5em
+.u-h1
+    font-size 2em
+    font-weight 400
+.u-h2
+    @extends .u-h1
+.u-p
+    color var(--grayishBlue)
+    line-height 1.8
+    font-size .9em
+.u-button
+    background var(--softBlue)
+    color white
+    padding 1em 1em
+    font-size .9em
+    font-weight 500
+    border-radius .5em
+    margin-left .5em 
+    border none
+    box-shadow 0 5px 10px -5px var(--softBlue)
+    cursor pointer
+    &:first-of-type
+        margin 0
+    &:hover
+        background #f7f7f7
+        color var(--veryDarkBlue)
+        box-shadow 0 5px 10px -5px var(--grayishBlue)
+        transition .3s background, .4s color, .4s box-shadow 

@@ -1,0 +1,47 @@
+.tabs
+    // border 1px solid red
+    margin-top 2em
+    border-top 1px solid var(--grayishBlue)
+    &-link
+        
+        border-bottom 1px solid var(--grayishBlue)
+    &-content
+        display none
+        img 
+            max-width 100%
+    &-grid
+        margin-top 4em
+    label 
+        padding 1.3em 0
+        display block
+        position relative
+        &:after
+            display none
+            content ""
+            background-color red
+            height 5px
+            position absolute
+            bottom 0
+            left 0
+            width 50%
+            transform translateX(50%) 
+    input 
+        display none
+    input[id="bookmarking"]:checked
+        & ~ ul [for="bookmarking"]:after
+            display block
+        & ~ .tabs-grid #tab-bookmarking
+            display block
+            padding 0 1em
+    input[id="searching"]:checked 
+        & ~ ul [for="searching"]:after
+            display block
+        & ~ .tabs-grid #tab-searching
+            display block
+            padding 0 1em
+    input[id="sharing"]:checked 
+        & ~ ul [for="sharing"]:after
+            display block
+        & ~ .tabs-grid #tab-sharing
+            display block
+            padding 0 1em
