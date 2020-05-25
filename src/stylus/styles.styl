@@ -1,6 +1,7 @@
 @import "./hero.styl"
 @import "./header.styl"
 @import "./features.styl"
+@import "./download.styl"
 
 :root 
     --softBlue hsl(231, 69%, 60%)
@@ -26,9 +27,10 @@ ul
     padding: 0 1.5em
 .u-h1
     font-size 2em
-    font-weight 400
+    font-weight 500
 .u-h2
     @extends .u-h1
+    font-size 1.5em
 .u-p
     color var(--grayishBlue)
     line-height 1.8
@@ -51,3 +53,5 @@ ul
         color var(--veryDarkBlue)
         box-shadow 0 5px 10px -5px var(--grayishBlue)
         transition .3s background, .4s color, .4s box-shadow 
+    &.is-fullWidth
+        width 100%

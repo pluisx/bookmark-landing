@@ -80,6 +80,7 @@
   right: 0;
   padding: 1em 0;
   transition: 0.3s background;
+  z-index: 1;
 }
 .header-logo {
   display: inline-flex;
@@ -95,16 +96,17 @@
 }
 .tabs {
   margin-top: 2em;
-  border-top: 1px solid var(--grayishBlue);
+  border-top: 1px solid #ddd;
 }
 .tabs-link {
-  border-bottom: 1px solid var(--grayishBlue);
+  border-bottom: 1px solid #ddd;
 }
 .tabs-content {
   display: none;
 }
 .tabs-content img {
   max-width: 100%;
+  margin-bottom: 1.5em;
 }
 .tabs-grid {
   margin-top: 4em;
@@ -151,6 +153,34 @@
 }
 .features {
   text-align: center;
+  padding: 3em 0;
+}
+.download {
+  text-align: center;
+  padding: 3em 0;
+}
+.download .u-wrapper >.u-p {
+  margin-bottom: 3em;
+}
+.download-grid {
+  margin: 3em 1em 0;
+  display: grid;
+  grid-row-gap: 2em;
+}
+.download-item {
+  border-radius: 1em;
+  padding: 1.5em;
+  padding-top: 2.5em;
+  background: url("../images/bg-dots.svg") repeat-x center bottom 100px;
+  box-shadow: 0 10px 20px -5px #d7d7d7;
+}
+.download-item .u-p {
+  margin-bottom: 4em;
+  margin-top: 0.5rem;
+}
+.download-item .u-h3 {
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
 }
 :root {
   --softBlue: #5368df;
@@ -180,7 +210,10 @@ ul {
 .u-h1,
 .u-h2 {
   font-size: 2em;
-  font-weight: 400;
+  font-weight: 500;
+}
+.u-h2 {
+  font-size: 1.5em;
 }
 .u-p {
   color: var(--grayishBlue);
@@ -207,4 +240,7 @@ ul {
   color: var(--veryDarkBlue);
   box-shadow: 0 5px 10px -5px var(--grayishBlue);
   transition: 0.3s background, 0.4s color, 0.4s box-shadow;
+}
+.u-button.is-fullWidth {
+  width: 100%;
 }
