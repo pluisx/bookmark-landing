@@ -115,6 +115,7 @@
   padding: 1.3em 0;
   display: block;
   position: relative;
+  cursor: pointer;
 }
 .tabs label:after {
   display: none;
