@@ -1,0 +1,39 @@
+.carousel
+    text-align left
+    margin 2em 0
+    &-content
+        &[open]
+            .carousel
+                &-header
+                    &::after
+                        display none
+                    &::before
+                        content ""
+                        background-image url('../images/icon-arrow-open.svg')
+                        background-repeat no-repeat
+                        width 20px
+                        height 10px
+                        display block
+                        float right
+                        margin-right 12px
+                        transform rotate(180deg)
+    &-header
+        padding 1.5em 0
+        cursor pointer
+        list-style none
+        user-select none
+        border-bottom 1px solid #ddd
+        font-size .85em
+        &:focus
+            outline none
+        &::after   
+            content ""
+            background-image url('../images/icon-arrow.svg')
+            background-repeat no-repeat
+            width 20px
+            height 10px
+            display block
+            float right 
+            margin-right 12px
+    
+        
