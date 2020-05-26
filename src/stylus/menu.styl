@@ -55,3 +55,34 @@
         &:hover
             background url('../images/icon-hamburger-hover.svg') no-repeat center center
             transition .4s background
+
+    @media screen and (min-width 1024px)
+        transform translateY(0)
+        visibility visible
+        opacity 1
+        position initial
+        height auto
+        background initial
+        
+        a
+            color var(--veryDarkBlue)
+        li    
+            border none
+            &:last-child
+                a
+                    border-radius .5em
+                    margin-top 0
+                    padding .7em 2em
+                    background var(--softRed)
+                    color white
+                    margin-left 2em
+                    &:hover
+                        border #f7f7f7
+                        background #f7f7f7
+                        color var(--veryDarkBlue)
+                        box-shadow 0 5px 10px -5px var(--grayishBlue)
+                        transition .3s background, .4s color, .4s box-shadow 
+        ul
+            display flex
+        &-open
+            display none
