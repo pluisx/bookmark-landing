@@ -430,15 +430,18 @@
   display: inline-block;
 }
 .footer-social .twitter {
-  mask: url("../images/icon-twitter.svg") no-repeat center;
+  mask-image: url("../images/icon-twitter.svg") no-repeat center;
+  -webkit-mask: url("../images/icon-twitter.svg") no-repeat center;
 }
 .footer-social .facebook {
-  mask: url("../images/icon-facebook.svg") no-repeat center;
+  mask-image: url("../images/icon-facebook.svg") no-repeat center;
+  -webkit-mask: url("../images/icon-facebook.svg") no-repeat center;
 }
 .footer-social .icon {
   display: inline-block;
   background: #fff;
   mask-size: contain;
+  -webkit-mask-size: contain;
   margin: 0.5em;
 }
 .footer-social .icon:hover {
