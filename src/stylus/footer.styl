@@ -12,13 +12,16 @@
             height 30px
             display inline-block
         .twitter
-            mask url('../images/icon-twitter.svg') no-repeat center
+            mask-image: url('../images/icon-twitter.svg') no-repeat center
+            -webkit-mask: url('../images/icon-twitter.svg') no-repeat center
         .facebook
-            mask url('../images/icon-facebook.svg') no-repeat center 
+            mask-image: url('../images/icon-facebook.svg') no-repeat center 
+            -webkit-mask: url('../images/icon-facebook.svg') no-repeat center 
         .icon
             display inline-block
             background white
             mask-size contain
+            -webkit-mask-size contain
             margin 0.5em
             &:hover
                 background var(--softBlue)
