@@ -5,22 +5,51 @@
     a
         color white
         text-decoration none
-
     &-social
         margin-top 2em
         a
-            width 40px
-            height 40px
+            width 30px
+            height 30px
             display inline-block
         .twitter
-            background url('../images/icon-twitter.svg') no-repeat center
+            mask url('../images/icon-twitter.svg') no-repeat center
         .facebook
-            background url('../images/icon-facebook.svg') no-repeat center
+            mask url('../images/icon-facebook.svg') no-repeat center 
+        .icon
+            display inline-block
+            background white
+            mask-size contain
+            margin 0.5em
+            &:hover
+                background var(--softBlue)
+            &:focus
+                background var(--softBlue)
+
     &-menu
         margin-top 2em
         a
             display block
-            padding 1em 0
+            padding 1em
             text-transform uppercase
             letter-spacing 1px
             color #ddd
+            &:hover
+                color var(--softBlue)
+    
+    @media screen and (min-width 1024px)
+
+        img 
+            margin-right 1em
+        &-content
+            display flex
+            justify-content space-between
+        &-menu
+            display flex
+            margin 0
+            a
+                font-size 0.9em
+                
+        &-primary
+            display flex
+            align-items center
+               

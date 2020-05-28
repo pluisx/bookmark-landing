@@ -6,3 +6,20 @@
     &-buttons
         padding-top 1em
         
+    @media screen and (min-width 1024px)
+        text-align left
+        padding 2em 0
+        .u-wrapper
+            max-width 1140px
+        &-grid
+            display grid
+            align-items center
+            grid-template-columns 420px 1fr 
+            grid-template-areas "content image"
+        &-imageContainer
+            grid-area image
+            text-align right 
+        &-content
+            grid-area content
+            position relative
+            top -50px

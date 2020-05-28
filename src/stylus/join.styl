@@ -6,7 +6,15 @@
     small 
         text-transform uppercase
         letter-spacing 3px
+
+    @media screen and (min-width 1024px)
+        .u-h4
+            font-size 2em
+            max-width 500px
+            margin 0.5em auto 1em
 .form
+    max-width 450px
+    margin auto
     &-input
         width 100%
         padding 1em
@@ -18,3 +26,13 @@
         outline 0
         &[placeholder]
             color grey
+
+    @media screen and (min-width 1024px)
+        display flex
+        
+        &-input
+            flex-shrink 0
+            width 75%
+            margin-right 1em
+            margin-bottom 0
+        

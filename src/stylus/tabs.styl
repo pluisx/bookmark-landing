@@ -7,9 +7,12 @@
         border-bottom 1px solid #ddd
     &-content
         display none
+        flex-direction column
         img 
             max-width 100%
             margin-bottom 1.5em
+        .u-button
+            padding 1em 2em
     &-grid
         margin-top 4em
     label 
@@ -20,7 +23,7 @@
         &:after
             display none
             content ""
-            background-color red
+            background-color var(--softRed)
             height 5px
             position absolute
             bottom 0
@@ -33,17 +36,34 @@
         & ~ ul [for="bookmarking"]:after
             display block
         & ~ .tabs-grid #tab-bookmarking
-            display block
+            display flex
             padding 0 1em
     input[id="searching"]:checked 
         & ~ ul [for="searching"]:after
             display block
         & ~ .tabs-grid #tab-searching
-            display block
+            display flex
             padding 0 1em
     input[id="sharing"]:checked 
         & ~ ul [for="sharing"]:after
             display block
         & ~ .tabs-grid #tab-sharing
-            display block
+            display flex
             padding 0 1em
+    
+    @media screen and (min-width 1024px)
+        border-top none
+        text-align left
+        ul 
+            display flex
+            justify-content center 
+        label
+            padding 2em 2em
+            &:after
+                width 100%
+                transform: translateX(0);
+        img 
+            margin-right 5em
+        &-content
+            flex-direction row
+            align-items center
