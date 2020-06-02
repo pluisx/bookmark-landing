@@ -12,10 +12,10 @@
             height 30px
             display inline-block
         .twitter
-            mask-image: url('../images/icon-twitter.svg') no-repeat center
+            mask: url('../images/icon-twitter.svg') no-repeat center
             -webkit-mask: url('../images/icon-twitter.svg') no-repeat center
         .facebook
-            mask-image: url('../images/icon-facebook.svg') no-repeat center 
+            mask: url('../images/icon-facebook.svg') no-repeat center 
             -webkit-mask: url('../images/icon-facebook.svg') no-repeat center 
         .icon
             display inline-block
@@ -25,7 +25,6 @@
             margin 0.5em
             &:hover
                 background var(--softRed)
-
     &-menu
         margin-top 2em
         a
@@ -38,7 +37,6 @@
                 color var(--softBlue)
     
     @media screen and (min-width 1024px)
-
         img 
             margin-right 1em
         &-content
@@ -51,7 +49,6 @@
                 font-size 0.9em
                 &:hover
                     color var(--softRed)
-                
         &-primary
             display flex
             align-items center

@@ -380,7 +380,7 @@
 .join {
   background: var(--softBlue);
   color: #fff;
-  padding: 3em 0 4em;
+  padding: 3em 0;
   text-align: center;
 }
 .join small {
@@ -398,7 +398,11 @@
   max-width: 550px;
   margin: auto;
 }
-.form-input {
+.form-validation {
+  position: relative;
+  height: 110px;
+}
+.form-validation input {
   width: 100%;
   padding: 1em;
   box-sizing: border-box;
@@ -409,9 +413,63 @@
   outline: 0;
   border: 2px solid #fff;
 }
-.form-validation .u-p {
+.form-validation > p {
+  visibility: hidden;
+}
+.form-validation > i {
+  visibility: hidden;
+}
+.form .error input {
+  border: 2px solid var(--softRed);
+}
+.form .error input ~ i.fa-exclamation-circle {
+  position: absolute;
+  color: var(--softRed);
+  right: 18px;
+  top: 15px;
+  font-size: 1.2em;
+  visibility: visible;
+}
+.form .error input ~ p {
+  background: var(--softRed);
   color: #fff;
   text-align: left;
+  font-style: italic;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 8px;
+  top: 45px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  visibility: visible;
+}
+.form .success input {
+  border: 2px solid #00ca55;
+}
+.form .success input ~ i.fa-exclamation-circle {
+  position: absolute;
+  color: #00ca55;
+  right: 18px;
+  top: 15px;
+  font-size: 1.2em;
+  visibility: visible;
+}
+.form .success input ~ p {
+  background: var(--softRed);
+  color: #fff;
+  text-align: left;
+  font-style: italic;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 8px;
+  top: 45px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  visibility: hidden;
 }
 @media screen and (min-width: 1024px) {
   .form {
@@ -444,11 +502,11 @@
   display: inline-block;
 }
 .footer-social .twitter {
-  mask-image: url("../images/icon-twitter.svg") no-repeat center;
+  mask: url("../images/icon-twitter.svg") no-repeat center;
   -webkit-mask: url("../images/icon-twitter.svg") no-repeat center;
 }
 .footer-social .facebook {
-  mask-image: url("../images/icon-facebook.svg") no-repeat center;
+  mask: url("../images/icon-facebook.svg") no-repeat center;
   -webkit-mask: url("../images/icon-facebook.svg") no-repeat center;
 }
 .footer-social .icon {
@@ -552,6 +610,7 @@ ul {
   box-shadow: 0 5px 10px -5px var(--softBlue);
   border: 2px solid var(--softBlue);
   cursor: pointer;
+  outline: none;
 }
 .u-button:hover {
   background: #fff;
@@ -570,6 +629,7 @@ ul {
   box-shadow: 0 5px 10px -5px var(--grayishBlue);
   cursor: pointer;
   border: 2px solid #f7f7f7;
+  outline: none;
 }
 .u-button-secondary:hover {
   background: #fff;

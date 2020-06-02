@@ -1,8 +1,9 @@
 .join
     background var(--softBlue)
     color white
-    padding 3em 0 4em
+    padding 3em 0
     text-align center
+    
     small 
         text-transform uppercase
         letter-spacing 3px
@@ -15,22 +16,74 @@
 .form
     max-width 550px
     margin auto
-    &-input
-        width 100%
-        padding 1em
-        box-sizing border-box
-        margin-bottom 1em
-        border-radius 0.4em
-        border none
-        font-size 0.9rem
-        outline 0
-        border 2px solid white
+    
     &-validation   
-        
-        .u-p
-            color white
-            text-align left
+        position relative
+        height 110px
+        & input
+            width 100%
+            padding 1em
+            box-sizing border-box
+            margin-bottom 1em
+            border-radius 0.4em
+            border none
+            font-size 0.9rem
+            outline 0
+            border 2px solid white
+        > p
+            visibility hidden
+        > i 
+            visibility hidden
+    .error 
+        input
+            border 2px solid var(--softRed)
+            & ~ i.fa-exclamation-circle
+                position absolute
+                color var(--softRed)
+                right 18px
+                top 15px
+                font-size 1.2em
+                visibility visible
+            & ~ p
+                background var(--softRed)
+                color white
+                text-align left
+                font-style italic
+                margin 0
+                position absolute
+                width 100%
+                box-sizing border-box
+                padding 10px 8px
+                top 45px
+                border-bottom-right-radius 5px
+                border-bottom-left-radius 5px
+                visibility visible
 
+    .success 
+        input
+            border 2px solid #00ca55
+            & ~ i.fa-exclamation-circle
+                position absolute
+                color #00ca55
+                right 18px
+                top 15px
+                font-size 1.2em
+                visibility visible
+            & ~ p
+                background var(--softRed)
+                color white
+                text-align left
+                font-style italic
+                margin 0
+                position absolute
+                width 100%
+                box-sizing border-box
+                padding 10px 8px
+                top 45px
+                border-bottom-right-radius 5px
+                border-bottom-left-radius 5px
+                visibility hidden
+       
 
     @media screen and (min-width 1024px)
         display flex
