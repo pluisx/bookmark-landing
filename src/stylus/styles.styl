@@ -49,22 +49,45 @@ ul
     padding 1em 1em
     font-size .9em
     font-weight 500
-    border-radius .5em
+    border-radius .4em
     margin-left .5em 
     border none
     box-shadow 0 5px 10px -5px var(--softBlue)
+    border 2px solid var(--softBlue)
     cursor pointer
+    &:hover
+        background white
+        border 2px solid var(--softBlue)
+        color var(--softBlue)
+    &-secondary
+        background #f7f7f7
+        color var(--veryDarkBlue)
+        padding 1em 1em
+        font-size .9em
+        font-weight 500
+        border-radius .5em
+        margin-left .5em 
+        border none
+        box-shadow 0 5px 10px -5px var(--grayishBlue)
+        cursor pointer
+        border 2px solid #f7f7f7
+        &:hover
+            background white
+            border 2px solid var(--veryDarkBlue)
+            
     &:first-of-type
         margin 0
     &.is-red
         background var(--softRed)
         color white
         margin 0
-    &:hover
-        background #f7f7f7
-        color var(--veryDarkBlue)
-        box-shadow 0 5px 10px -5px var(--grayishBlue)
-        transition .3s background, .4s color, .4s box-shadow 
+        border 2px solid var(--softRed)
+        height 100%
+        &:hover
+            background white
+            border 2px solid var(--softRed)
+            color var(--softRed)
+            box-shadow 0 5px 10px -5px #2f2f2f80
     &.is-fullWidth
         width 100%
     

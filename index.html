@@ -50,7 +50,7 @@
             browser tab and see your sites load instantly. Try it for free.</p>
             <div class="hero-buttons">
               <button class="u-button">Get it on Chrome</button>
-              <button class="u-button">Get it on Firefox</button>
+              <button class="u-button-secondary">Get it on Firefox</button>
             </div>
         </div>
       </div>
@@ -232,9 +232,13 @@
     <div class="u-wrapper">
       <small>35,000+ already joined</small>
       <h4 class="u-h4">Stay up-to-date with what we’re doing</h4>
-      <form action="" class="form">
-        <input placeholder="Enter your email-address" type="text" class="form-input">
-        <input type="submit" value="Contact Us" class="u-button is-red is-fullWidth">
+      <form action="#" class="form">
+        <div class="form-validation">
+          <input placeholder="Enter your email-address" type="email" id="email" class="form-input">
+          <i class="fas fa-exclamation-circle"></i>
+          <p class="u-p form-error">Whoops, make sure it's an email</p>
+        </div>
+        <submit class="u-button is-red is-fullWidth">Contact Us</submit>
       </form>
     </div>
   </section>
@@ -264,6 +268,7 @@
     </div>
   </footer>
   
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </body>
 </html>

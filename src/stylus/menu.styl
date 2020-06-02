@@ -18,7 +18,7 @@
         &:last-child
             a
                 border 2px solid white
-                border-radius: 5px
+                border-radius: 0.4em
                 margin-top 1em
                 padding .7em
     a
@@ -67,7 +67,7 @@
             color var(--veryDarkBlue)
             font-size .9em
             &:hover
-                color var(--softBlue)
+                color var(--softRed)
         li    
             border none
             &:last-child
@@ -80,12 +80,14 @@
                     background var(--softRed)
                     color white
                     margin-left 2em
+                    margin-right 0
+                    border 2px solid var(--softRed)
+                    box-shadow 0 5px 10px -5px var(--grayishBlue)
                     &:hover
-                        border-color #f7f7f7
-                        background #f7f7f7
-                        color var(--veryDarkBlue)
-                        box-shadow 0 5px 10px -5px var(--grayishBlue)
-                        transition .3s background, .4s color, .4s box-shadow
+                        background none 
+                        border 2px solid var(--softRed)
+                        color var(--softRed)
+                        
         ul
             display flex
         &-open
